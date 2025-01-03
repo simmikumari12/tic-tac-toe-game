@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body{
+    background-color:#ffc2d1 ;
+    text-align: center;
+    /* color: #fb6f92; */
+
+}
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout{
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25vmin;
+}
+.box{
+    height: 18vmin;
+    width : 18vmin;
+    border-radius: 0.5rem;
+    background-color:#ffffff;
+    border-color: #ffe5ec;
+    box-shadow: 0 0 1rem rgba(155, 39, 93, 0.4);
+    font-size: 8vmin; 
+    color: #0e0c0c;
+    
+}
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border-color: #e36f8e;
+    box-shadow: 0 0 1rem rgba(155, 39, 93, 0.4);
+    background-color: #fb6f92;
+    color: rgb(255, 255, 255);
+    
+}
+#new-game-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    border-color: #e36f8e;
+    box-shadow: 0 0 1rem rgba(155, 39, 93, 0.4);
+    background-color: #fb6f92;
+    color: rgb(255, 255, 255);
+}
+#msg {
+    color:rgb(0, 0, 0);
+    font-size: 3vmin;
+}
+
+.msg-container{
+    height: 20vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hide{
+    display: none;
+}
+
+.navbar {
+    font-size: larger;
+    background-color: black;
+    color: #e45377;
+    height: 10vmin;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+.strike {
+    position: relative;
+}
+
+.strike::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px; /* Adjust the thickness of the strike */
+    background-color: #e45377; /* Strike color */
+    top: 50%; /* Center the line */
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 80vh;
+    }
+    
+    .layout {
+        height: 50vmin;
+        width: 50vmin;
+    }
+
+    .box {
+        height: 15vmin;
+        width: 15vmin;
+        font-size: 6vmin;
+    }
+
+    #reset-btn, #new-game-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+
+    .msg-container {
+        height: 15vmin;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 90vh;
+    }
+    
+    .layout {
+        height: 40vmin;
+        width: 40vmin;
+    }
+
+    .box {
+        height: 12vmin;
+        width: 12vmin;
+        font-size: 5vmin;
+    }
+
+    #reset-btn, #new-game-btn {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+
+    .msg-container {
+        height: 12vmin;
+    }
+
+    .navbar {
+        font-size: small;
+        height: 8vmin;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        height: 80vh;
+    }
+
+    .layout {
+        height: 50vmin;
+        width: 50vmin;
+    }
+
+    .box {
+        height: 15vmin;
+        width: 15vmin;
+        font-size: 6vmin;
+    }
+
+    #reset-btn, #new-game-btn {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+
+    .msg-container {
+        height: 15vmin;
+    }
+
+    .navbar {
+        font-size: small;
+        margin-bottom: 2rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        height: 90vh;
+    }
+
+    .layout {
+        height: 40vmin;
+        width: 40vmin;
+    }
+
+    .box {
+        height: 12vmin;
+        width: 12vmin;
+        font-size: 5vmin;
+    }
+
+    #reset-btn, #new-game-btn {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+
+    #msg {
+        font-size: 4vmin;
+    }
+
+    .msg-container {
+        height: 12vmin;
+    }
+
+    .navbar {
+        font-size: small;
+        height: 8vmin;
+    }
+}
+
+@media (max-width: 320px) {
+    .layout {
+        height: 30vmin;
+        width: 30vmin;
+    }
+
+    .box {
+        height: 10vmin;
+        width: 10vmin;
+        font-size: 4vmin;
+    }
+
+    #reset-btn, #new-game-btn {
+        padding: 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    #msg {
+        font-size: 3vmin;
+    }
+
+    .msg-container {
+        height: 10vmin;
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(-100%) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
